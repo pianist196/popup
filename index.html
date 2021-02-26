@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+    <link rel="stylesheet" href="./css/nouislider.min.css">
+    <link rel="stylesheet" href="./css/select2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="popup">
+            <form action="#" class="form__popup">
+                <h1 class="form__title">Регистрация</h1>
+
+                <div class="field">
+
+                    <!-- <select id="fullname" class="form-fields-input">
+                        <option></option>
+                        <option>Екатеринбург</option>
+                        <option>Москва</option>
+                        <option>Санкт-Петербург</option>
+                        <option>Самара</option>
+                        <option>Челябинск</option>
+                        <option>Иркутск</option>
+                    </select> -->
+                    <div class="custom-select" style="width:100%;">
+                        <select>
+                            <option value="0"></option>
+                            <option value="1">Екатеринбург</option>
+                            <option value="2">Москва</option>
+                            <option value="3">Санкт-Петербург</option>
+                            <option value="4">Самара</option>
+                            <option value="5">Челябинск</option>
+                            <option value="6">Иркутск</option>
+                        </select>
+                    </div>
+                    <label class="city" for="fullname">Город</label>
+
+                </div>
+
+                <div class="field">
+                    <input type="text" name="fullname" id="fullname" class="fullname" placeholder=" ">
+                    <label for="fullname">Имя Фамилия</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="email" id="email" class="email phone_mask" placeholder="+7">
+                    <label for="email">Телефон</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="email1" id="email1" class="email1" placeholder=" ">
+                    <label for="email1">Комментарий</label>
+                </div>
+
+                <div class="masterclass">
+                    <h5 class="masterclass__title">Мастер-класс</h5>
+                    <div class="radio">
+                        <input class="radio__input" name="male" type="radio" id="radio_1">
+                        <label class="radio__label" for="radio_1">Экономия на онлайн-шопинге</label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="radio__input" name="male" type="radio" id="radio_2">
+                        <label class="radio__label" for="radio_2">Мастер-класс</label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="radio__input" name="male" type="radio" id="radio_3">
+                        <label class="radio__label" for="radio_3">Лучшие площадки</label>
+                    </div>
+
+                    <div class="radio">
+                        <input class="radio__input" name="male" type="radio" id="radio_4">
+                        <label class="radio__label" for="radio_4">Мастер-класс</label>
+                    </div>
+                </div>
+                <div class="time">
+                    <h5 class="time__title">Время проведения</h5>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="checkbox_1">
+                        <label class="checkbox__label" for="checkbox_1">12:00 – 14:00</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="checkbox_2">
+                        <label class="checkbox__label" for="checkbox_2">15:00 – 17:00</label>
+                    </div>
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="checkbox_3">
+                        <label class="checkbox__label" for="checkbox_3">19:00 – 21:00</label>
+                    </div>
+                </div>
+                <div class="switch__item">
+                    <div class="switch__online">Онлайн</div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="switch__offline">Офлайн</div>
+                </div>
+                <label class="filters-price__label">
+                    <input type="number" min="0" max="10000" class="filters-price__input" id="input" placeholder="5000">
+                    <span class="filters-price__text">₽</span>
+                </label>
+
+                <div class="filters-price__slider" id="range-slider"></div>
+
+                <div class="form__footer">
+                    <button class="footer__btn" type="submit" id="submit" disabled>Отправить</button>
+                    <p class="footer__text">
+                        Нажимая на кнопку, вы соглашаетесь
+                        с <a class="footer__text-link" href="#">Политикой обработки персональных данных</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js"
+        type="text/javascript"></script>
+    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
