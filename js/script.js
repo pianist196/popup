@@ -128,3 +128,6 @@ const form = document.querySelector('.form__popup')
 closeBtn.addEventListener('click', () => {
     form.classList.add('hide')
 })
+
+// ======================================================
+

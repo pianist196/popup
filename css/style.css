@@ -334,15 +334,25 @@ input:checked + .slider:before + .switch__offline {
   border: none;
   cursor: pointer;
   margin-right: 29px;
+  transition: all 0.3s ease-in;
 }
 
-.footer__btn:disabled {
+.footer__btn:hover {
+  background-color: #ff5757;
+  box-shadow: 0px 10px 30px rgba(255, 119, 119, 0.4);
+}
+
+.footer__btn.disabled {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   padding: 17px 55px;
   border: none;
   color: #3d3c5a;
   box-shadow: none;
+}
+
+.footer__btn.disabled:hover {
+  cursor: none;
 }
 
 .footer__text {
