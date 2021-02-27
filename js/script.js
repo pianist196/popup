@@ -21,6 +21,10 @@ testWebP(function (support) {
 
 $(".phone_mask").mask("+7 999 999 99 99", { placeholder: " " });
 
+
+
+// ============================================================
+
 const rangeSlider = document.getElementById('range-slider')
 
 noUiSlider.create(rangeSlider, {
@@ -115,3 +119,12 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+// ======================================================
+
+const closeBtn = document.querySelector('.form__close-btn')
+const form = document.querySelector('.form__popup')
+
+closeBtn.addEventListener('click', () => {
+    form.classList.add('hide')
+})

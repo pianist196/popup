@@ -115,6 +115,20 @@
   max-width: 720px;
   padding: 60px 80px;
   margin: 80px 0;
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.form__close-btn {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
 }
 
 .form__title {
@@ -847,17 +861,25 @@ input::-webkit-inner-spin-button {
 .select-selected:after {
   position: absolute;
   content: "";
+  background-image: url("../img/city-svg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
   top: -2px;
   right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  width: 10px;
+  height: 5px;
 }
 
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: -12px;
+  background-image: url("../img/city-svg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  width: 10px;
+  height: 5px;
+  transform: rotate(180deg);
+  top: 0px;
 }
 
 .select-items div,
@@ -873,6 +895,10 @@ input::-webkit-inner-spin-button {
   font-size: 24px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.select-items div {
+  padding-left: 16px;
 }
 
 .select-selected {
@@ -897,9 +923,8 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-.select-items div:hover,
-.same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.select-items div:hover {
+  color: #fff;
 }
 
 .same-as-selected {
