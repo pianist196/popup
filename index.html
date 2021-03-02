@@ -15,7 +15,7 @@
 
     <div class="wrapper">
         <div class="popup">
-            <form action="#" class="form__popup">
+            <form action="#" class="form__popup" id="form">
                 <h1 class="form__title">Регистрация</h1>
                 <img class="form__close-btn" src="./img/close-svg.svg" alt="">
 
@@ -32,21 +32,20 @@
                         </select>
                     </div>
                     <label class="city" for="fullname">Город</label>
-
                 </div>
 
                 <div class="field">
-                    <input type="text" name="fullname" id="fullname" class="fullname" placeholder=" ">
+                    <input type="text" name="fullname" id="fullname" class="fullname _req" placeholder=" ">
                     <label for="fullname">Имя Фамилия</label>
                 </div>
 
                 <div class="field">
-                    <input type="text" name="email" id="email" class="email phone_mask" placeholder="+7">
+                    <input type="text" name="email" id="email" class="email phone_mask _req" placeholder="+7">
                     <label for="email">Телефон</label>
                 </div>
 
                 <div class="field">
-                    <input type="text" name="email1" id="email1" class="email1" placeholder=" ">
+                    <input type="text" name="email1" id="email1" class="email1 _req" placeholder=" ">
                     <label for="email1">Комментарий</label>
                 </div>
 

@@ -131,3 +131,35 @@ closeBtn.addEventListener('click', () => {
 
 // ======================================================
 
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form')
+    form.addEventListener('submit', formSend)
+
+    function formSend(e) {
+        e.preventDefault()
+
+        let error = formValidate(form)
+
+        if (error === 0) {
+
+        } else {
+            alert('HELP')
+        }
+    }
+
+    function formValidate(form) {
+        let error = 0
+        let formReq = document.querySelectorAll('._req')
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index]
+            const btn = document.querySelector('.footer__btn')
+
+            if (input.value !== '') {
+                btn.classList.remove('disabled')
+            }
+        }
+        return error
+    }
+})
+
