@@ -17,7 +17,12 @@
         <div class="popup">
             <form action="#" class="form__popup" id="form">
                 <h1 class="form__title">Регистрация</h1>
-                <img class="form__close-btn" src="./img/close-svg.svg" alt="">
+                <div class="form__close-btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.00122 1L29.001 29" stroke-width="2" />
+                        <path d="M29.0007 1L1.00093 29" stroke-width="2" />
+                    </svg>
+                </div>
 
                 <div class="field">
                     <div class="custom-select" style="width:100%;">
@@ -31,28 +36,31 @@
                             <option value="6">Иркутск</option>
                         </select>
                     </div>
-                    <label class="city" for="fullname">Город</label>
+                    <label class="city">Город</label>
                 </div>
 
                 <div class="field">
-                    <input type="text" name="fullname" id="fullname" class="fullname _req" placeholder=" ">
+                    <input type="text" onkeyup="checkParams()" name="fullname" id="fullname" class="fullname _req"
+                        placeholder=" ">
                     <label for="fullname">Имя Фамилия</label>
                 </div>
 
                 <div class="field">
-                    <input type="text" name="email" id="email" class="email phone_mask _req" placeholder="+7">
+                    <input type="text" onkeyup="checkParams()" name="email" id="email" class="email phone_mask _req"
+                        placeholder="+7">
                     <label for="email">Телефон</label>
                 </div>
 
                 <div class="field">
-                    <input type="text" name="email1" id="email1" class="email1 _req" placeholder=" ">
+                    <input type="text" onkeyup="checkParams()" name="email1" id="email1" class="email1 _req"
+                        placeholder=" ">
                     <label for="email1">Комментарий</label>
                 </div>
 
                 <div class="masterclass">
                     <h5 class="masterclass__title">Мастер-класс</h5>
                     <div class="radio">
-                        <input class="radio__input" name="male" type="radio" id="radio_1">
+                        <input class="radio__input" name="male" type="radio" id="radio_1" checked>
                         <label class="radio__label" for="radio_1">Экономия на онлайн-шопинге</label>
                     </div>
 
@@ -74,7 +82,7 @@
                 <div class="time">
                     <h5 class="time__title">Время проведения</h5>
                     <div class="checkbox">
-                        <input class="checkbox__input" type="checkbox" id="checkbox_1">
+                        <input class="checkbox__input" type="checkbox" id="checkbox_1" checked>
                         <label class="checkbox__label" for="checkbox_1">12:00 – 14:00</label>
                     </div>
                     <div class="checkbox">
@@ -87,14 +95,20 @@
                     </div>
                 </div>
                 <div class="switch__item">
-                    <div class="switch__online">Онлайн</div>
-                    <label class="switch">
-                        <input type="checkbox">
+                    <!-- <label class="switch">
+                        <input type="checkbox" id="switch" class="switch__input">
                         <span class="slider round"></span>
+                        <label class="switch__online" for="switch">Онлайн</label>
+                        <label class="switch__offline" for="switch">Офлайн</label>
+                    </label> -->
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">
+                        <span>Онлайн</span>
+                        <span>Офлайн</span>
                     </label>
-                    <div class="switch__offline">Офлайн</div>
                 </div>
                 <label class="filters-price__label">
+                    <div class="filters-price__label-title">Сколько вы готовы заплатить за мероприятие?</div>
                     <input type="number" min="0" max="10000" class="filters-price__input" id="input" placeholder="5000">
                     <span class="filters-price__text">₽</span>
                 </label>
@@ -102,13 +116,30 @@
                 <div class="filters-price__slider" id="range-slider"></div>
 
                 <div class="form__footer">
-                    <button class="footer__btn disabled" type="submit" id="submit">Отправить</button>
+                    <button class="footer__btn" type="submit" id="submit" disabled>Отправить</button>
+                    <div class="footer__btn-preloader">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31 17C31 24.732 24.732 31 17 31C9.26801 31 3 24.732 3 17C3 9.26801 9.26801 3 17 3"
+                                stroke="#FF7777" stroke-width="6" stroke-linecap="round" />
+                        </svg>
+                    </div>
                     <p class="footer__text">
                         Нажимая на кнопку, вы соглашаетесь
                         с <a class="footer__text-link" href="#">Политикой обработки персональных данных</a>
                     </p>
                 </div>
             </form>
+            <div class="popup__thank">
+                <div class="popup__thank__close-btn">
+                    <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.00122 1L29.001 29" stroke-width="2" />
+                        <path d="M29.0007 1L1.00093 29" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="popup__thank-title">Спасибо за заявку</div>
+                <div class="popup__thank-subtitle">Мы свяжемся с вами в ближайшее время</div>
+                <button class="popup__thank-btn">Продолжить</button>
+            </div>
         </div>
     </div>
 

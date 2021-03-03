@@ -129,37 +129,48 @@ closeBtn.addEventListener('click', () => {
     form.classList.add('hide')
 })
 
+
 // ======================================================
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form')
+    const footerBtn = document.querySelector('.footer__btn')
+    const footerBtnPre = document.querySelector('.footer__btn-preloader')
     form.addEventListener('submit', formSend)
 
-    function formSend(e) {
+    async function formSend(e) {
         e.preventDefault()
 
-        let error = formValidate(form)
+        footerBtn.classList.add('hide')
+        footerBtnPre.classList.add('show')
 
-        if (error === 0) {
-
-        } else {
-            alert('HELP')
-        }
-    }
-
-    function formValidate(form) {
-        let error = 0
-        let formReq = document.querySelectorAll('._req')
-
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index]
-            const btn = document.querySelector('.footer__btn')
-
-            if (input.value !== '') {
-                btn.classList.remove('disabled')
-            }
-        }
-        return error
+        window.setTimeout(() => {
+            form.classList.add('hide')
+            popupThank.classList.add('show')
+        }, 2000)
     }
 })
+
+function checkParams() {
+    let fullname = $('#fullname').val();
+    let email = $('#email').val();
+    let email1 = $('#email1').val();
+
+    if (fullname.length != 0 && email.length != 0 && email1.length != 0) {
+        $('#submit').removeAttr('disabled');
+    } else {
+        $('#submit').attr('disabled', 'disabled');
+    }
+}
+
+const popupThank = document.querySelector('.popup__thank')
+const closeBtnThank = document.querySelector('.popup__thank__close-btn')
+
+closeBtnThank.addEventListener('click', () => {
+    popupThank.classList.add('hide')
+})
+
+
+// =================================
+
 
