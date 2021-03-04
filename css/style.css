@@ -1105,6 +1105,51 @@ input::-webkit-inner-spin-button {
 
 /* ================================ */
 
+@media (max-width: 1300px) {
+  .form__popup::before {
+    width: 400px;
+    height: 400px;
+    right: 55%;
+  }
+
+  .form__popup::after {
+    width: 400px;
+    height: 400px;
+    right: -23%;
+  }
+
+  .popup__thank::before {
+    width: 400px;
+    height: 400px;
+    bottom: -42%;
+    left: 59%;
+  }
+
+  .popup__thank::after {
+    width: 400px;
+    height: 400px;
+    top: -39%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form__popup::before {
+    display: none;
+  }
+
+  .form__popup::after {
+    display: none;
+  }
+
+  .popup__thank::before {
+    display: none;
+  }
+
+  .popup__thank::after {
+    display: none;
+  }
+}
+
 @media (max-width: 760px) {
   .footer__text {
     font-size: 14px;
@@ -1112,10 +1157,101 @@ input::-webkit-inner-spin-button {
   }
 }
 
+@media (max-width: 670px) {
+  .popup__thank-title {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 40px;
+  }
+
+  .popup__thank-subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 63px;
+  }
+}
+
 @media (max-width: 640px) {
   .footer__text {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .form__title {
+    font-size: 41px;
+    line-height: 46px;
+    margin-bottom: 60px;
+  }
+
+  .form__close-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .select-selected {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .select-items div {
+    padding: 6px 0px;
+    padding-left: 16px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  label {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .radio__label:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .radio__label:after {
+    top: 12px;
+    left: 8px;
+  }
+
+  .radio__label {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    padding-left: 39px;
+  }
+
+  .time {
+    margin-bottom: 35px;
+  }
+
+  .time .checkbox {
+    margin-bottom: 12px;
+  }
+
+  .time .checkbox__label {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 38px;
+  }
+
+  .time .checkbox__label:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .time .checkbox__label:after {
+    top: 12px;
+    left: 6px;
   }
 }
 
@@ -1128,7 +1264,119 @@ input::-webkit-inner-spin-button {
     margin: 0 78px 20px;
   }
 
+  .footer__btn-preloader {
+    margin: 0 108px 20px;
+  }
+
   .footer__text {
     text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .popup__thank {
+    padding: 60px 50px;
+  }
+
+  .popup__thank__close-btn svg {
+    width: 20px;
+    height: 20px;
+    top: 25px;
+    right: 25px;
+  }
+
+  .popup__thank-title {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 37px;
+  }
+
+  .popup__thank-subtitle {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (max-width: 540px) {
+  .form__popup {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 470px) {
+  .form__popup {
+    width: 400px;
+  }
+
+  .footer__btn {
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .popup__thank-title {
+    font-size: 30px;
+    line-height: 31px;
+    margin-bottom: 37px;
+  }
+
+  .popup__thank-subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 45px;
+  }
+
+  .popup__thank-btn {
+    padding: 11px 49px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form__close-btn svg {
+    top: 25px;
+    right: 25px;
+  }
+
+  .form__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 46px;
+  }
+
+  .radio__label {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .radio__label:before {
+    width: 17px;
+    height: 17px;
+    top: 2px;
+  }
+
+  .radio__label:after {
+    top: 9px;
+    left: 7px;
+  }
+
+  .time .checkbox__label {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .time .checkbox__label:before {
+    width: 17px;
+    height: 17px;
+    top: 3px;
+  }
+
+  .time .checkbox__label:after {
+    top: 9px;
+    left: 4px;
+  }
+
+  .switch__item {
+    margin-bottom: 50px;
   }
 }
